@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    background-color: rgb(253, 135, 214);
+    /* For browsers that do not support gradients */
+    background-image: linear-gradient(45deg, rgb(253, 135, 214), rgb(66, 138, 255));
+
+}
+
+form {
+    width: 90vw;
+    margin: 10% auto;
+    background-color: white;
+    padding: 1rem;
+}
+
+form>h1 {
+    text-align: center;
+}
+
+form>p {
+    display: block;
+    width: 100%;
+}
+
+label,
+input,
+textarea {
+    width: 100%;
+    margin-top: 0.4rem;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+input,
+textarea {
+    padding: 0.5rem;
+    border: 1px solid #333;
+
+}
+
+input[type="text"]:focus {
+    border: transparent;
+    outline: 2px solid pink;
+    box-shadow: 0 0 10px pink;
+}
+
+input[type="email"]:focus,
+textarea:focus {
+    border: transparent;
+    outline: 2px solid blue;
+    box-shadow: 0 0 10px blue;
+}
+
+.button {
+    display: block;
+    margin: auto;
+    width: 8rem;
+    background-color: transparent;
+    border: 1px solid #333;
+    padding: 0.5rem;
+}
+
+
+
+/* Toggle  */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 35px;
+    top: -10px;
+    right: -20px;
+
+}
+
+/* This next bit will hide out HTML checkbox  */
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* This is the "slider" bit  */
+
+.slider {
+    position: absolute;
+    cursor: grab;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cccccc;
+    transition: 0.5s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.5s;
+}
+
+input:checked+.slider {
+    background-color: #2196f3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 32px;
+}
+
+.slider.round:before {
+    border-radius: 32px;
+}
+
+.switch-toggle {
+    width: 100%;
+    text-align: center;
+
+}
