@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #ffb9c9, #aed7e8);
+    height: 100vh;
+}
+
+.container {
+    background: #fff;
+    margin: 10% auto;
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group:not(:nth-child(5)) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 5px;
+    height: fit-content;
+}
+
+.form-group:nth-child(5) {
+    display: flex;
+    margin: 20px;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type="submit"] {
+    width: 150px;
+    height: 35px;
+}
+
+input[type="submit"]:disabled {
+    width: 150px;
+    height: 35px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: cell;
+}
+
+input {
+    border: 1px solid #ccc;
+}
+
+input[type="text"]:focus {
+    outline: 2px solid pink;
+}
+
+input[type="email"]:focus,
+textarea:focus {
+    outline: 2px solid blue;
+}
+
+/* style for the checkbox */
+
+input[type="checkbox"] {
+    visibility: hidden;
+}
+
+.slide {
+    background: #ccc;
+    width: 50px;
+    height: 30px;
+    border-radius: 20px;
+    position: relative;
+    bottom: 23px;
+    left: 10px;
+}
+
+.slide:before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    left: 3px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+input[type="checkbox"]:checked~.slide {
+    background: blue;
+}
+
+input[type="checkbox"]:checked~.slide:before {
+    transform: translateX(22px);
+}
