@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: 'Fjalla One', Arial,
+        sans-serif;
+}
+
+body {
+    padding: 10vw;
+    background: linear-gradient(to right, #ffb8c8, #add6e8);
+}
+
+div.tell {
+    background-color: white;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form *:not(.switch-box-ch) {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 10px;
+}
+
+input,
+textarea {
+    padding: 2px;
+    border: 1px solid black;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type="text"]:focus {
+    outline: 1px solid pink;
+}
+
+input[type="email"]:focus,
+textarea:focus {
+    outline: 1px solid blue;
+}
+
+.switch-box {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.switch-box * {
+    display: inline-block;
+}
+
+/* .switch-box label {
+    vertical-align: center;
+} */
+
+/* Toggle */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+/* This next bit will hide our HTML checkbox */
+.switch input {
+    opacity: 1;
+    width: 0;
+    height: 0;
+}
+
+/* This is the "slider" bit */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.2s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 2px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.2s;
+}
+
+input:checked+.slider {
+    background-color: #2196f3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked+.slider:before {
+    transform: translateX(20px);
+}
+
+.slider.round {
+    border-radius: 32px;
+}
+
+.slider.round:before {
+    border-radius: 32px;
+}
+
+input[type="submit"] {
+    margin: 0 auto;
+    width: 60px;
+    background: transparent;
+    border: 1px solid grey;
+}
