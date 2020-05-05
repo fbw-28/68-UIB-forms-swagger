@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Excercise 68 - Forms swagger</title>
+</head>
+
+<body>
+    <form>
+
+        <h1>Tell us more</h1>
+
+        <p> <label for="fname">First Name</label>
+            <input type="text" id="fname" name="first_name" placeholder="First Name">
+        </p>
+
+        <p>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="last_name" placeholder="Last Name">
+        </p>
+
+        <p>
+            <label for="mail">Your email</label>
+            <input type="email" id="mail" name="user_mail" placeholder="Tell us how to contact you...">
+        </p>
+
+        <p>
+            <label for="msg">Tell us about yourself</label>
+            <textarea name="user_message" id="msg" cols="20" rows="5"></textarea>
+        </p>
+
+        <p class="switch-toggle">Want to know more?
+
+            <label for="switch-toggle" class="switch">
+                <input type="checkbox" id="switch-toggle">
+                <span class="slider round"></span>
+            </label>
+        </p>
+
+        <p>
+            <button type="submit" class="button" disabled>Submit</button>
+        </p>
+
+    </form>
+</body>
+
+</html>
