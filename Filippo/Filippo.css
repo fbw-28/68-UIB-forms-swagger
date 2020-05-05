@@ -1,0 +1,106 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2vh;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    font-size: 5vh;
+    text-align: center; 
+}
+.main {
+    margin: auto; 
+    width: 80vw;
+    border: 10vw solid ;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #f0bfe1, #928adb);
+}
+
+li{
+    list-style: none;
+}
+input, textarea{
+    width: 95%;
+    margin: auto;
+}
+textarea:focus, input[type="email"]:focus {
+    outline: 1px solid blue;
+}
+input[type="text"]:focus {
+    outline: 1px solid pink;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+  }
+  .switch input {
+    opacity: 1;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.2s;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 25px;
+    left: 4px;
+    bottom: 0px;
+    background-color: white;
+    transition: 0.2s;
+  }
+  input:checked + .slider {
+    background-color: #2196f3;
+  }
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+  }
+  input:checked + .slider:before {
+    transform: translateX(19px);
+  }
+  .slider.round {
+    border-radius: 32px;
+  }
+  .slider.round:before {
+    border-radius: 32px;
+  }
+ .submit, .toogle {
+    margin: 20px;
+    text-align: center;  
+}
+#submit {
+  text-align: center;
+    width: 30%;
+    height: 20%;  
+}
+#submit:disabled {
+
+outline: none;
+}
+@media only screen and (max-width:425px){
+  form {
+    position: relative;
+    left:-5vw;
+  }
+  h1 {
+    margin: 0;
+    font-size: 4vh;
+  }
+
+}
